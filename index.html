@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+
+  <div class="logo">
+    <span class="logo-main">Step</span>
+    <span class="logo-sub">Ordering</span>
+  </div>
+
+  <nav class="nav-links">
+
+    <a href="index.html" class="nav-link">
+      <i class="fa-solid fa-house"></i>
+      Home
+    </a>
+
+    <a href="./template/cart.html" class="nav-link cart-btn">
+      <i class="fa-solid fa-cart-shopping"></i>
+      Cart
+    </a>
+<button id="logout">Log out</button>
+  </nav>
+
+</header>
+
+  <!-- ===== CATEGORY NAV ===== -->
+  <div id="categories">
+     <button class="active" >All</button>
+   
+  </div>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="main-layout">
+
+    <!-- ===== FILTER PANEL ===== -->
+    <div class="filter-panel">
+      <div class="filter-header">
+        Filter
+        <span class="filter-icon">▼</span>
+      </div>
+
+      <!-- Spiciness Slider -->
+      <div class="spicy-slider-wrap">
+        <span class="spiciness-label" id="label">Spiciness: Not Chosen</span>
+        <input type="range" id="spicy" name="spicy" value="0" min="0" max="4">
+      </div>
+
+      <!-- No Nuts -->
+      <div class="checkbox-row">
+        <input type="checkbox" id="nuts" name="nuts" value="nuts">
+        <label for="nuts">No Nuts</label>
+      </div>
+
+      <!-- Vegetarian -->
+      <div class="checkbox-row">
+        <input type="checkbox" id="vegan" name="vegan" value="vegan">
+        <label for="vegan">Vegetarian Only</label>
+      </div>
+
+      <button class="btn-reset" id="resetBtn">Reset</button>
+      <button class="btn-apply" id="applyBtn">Apply Filter</button>
+    </div>
+
+    <!-- ===== PRODUCTS ===== -->
+    <div id="container"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="./app.js"></script>
+</body>
+</html>
